@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - User Authentication System{% endblock %}
+
+{% block content %}
+<h1>Welcome to Your Dashboard</h1>
+
+<div class="user-info">
+    <h3>User Information</h3>
+    <p><strong>Name:</strong> {{ user_name }}</p>
+    <p><strong>Email:</strong> {{ user_email }}</p>
+    <p><strong>Status:</strong> Logged In</p>
+</div>
+
+<div style="text-align: center;">
+    <p style="margin-bottom: 1rem; color: #666;">
+        You have successfully logged into your account. This is a protected area that only authenticated users can access.
+    </p>
+    
+    <a href="{{ url_for('logout') }}" class="btn btn-secondary" style="text-decoration: none; display: inline-block;">
+        Logout
+    </a>
+</div>
+{% endblock %}
